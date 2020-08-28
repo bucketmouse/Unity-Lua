@@ -9,7 +9,7 @@ Currently doesn't support documentation generation functionality or debugger att
 # Installation
 Include LuaUtility.cs somewhere in your project. If the project isn't already using Unity-Lua include LuaAttributes.cs as well. 
 
-Whenever you create a script, call [b]AttachEnums()[/b] on it to mirror your decorated C# enums.
+Whenever you create a script, call AttachEnums() on it to mirror your decorated C# enums.
 
 Assign LuaUtility.logHandler to some function to handle errors if you'd like it to do something aside from throwing an exception when an error occurs.
 
