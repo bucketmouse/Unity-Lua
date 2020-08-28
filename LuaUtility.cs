@@ -358,7 +358,7 @@ public static class LuaUtility
     /// <summary>
     /// Attaches enums decorated with the [LuaApiEnum] attribute to this script.
     /// </summary> 
-    private static void AttachEnums(this Script script)
+    public static void AttachEnums(this Script script)
     {
         if (m_EnumTables == null)
             BuildEnumTable();
