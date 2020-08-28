@@ -23,4 +23,4 @@ None.
 
 # Documentation
 
-See the original Unity-Lua documentation.
+See the [original Unity-Lua documentation](https://github.com/Semaeopus/Unity-Lua). All methods in LuaVM are now statics on Moonsharp.Script. Attributes are unchanged.
