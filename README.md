@@ -16,7 +16,7 @@ Assign LuaUtility.logHandler to some function to handle errors if you'd like it 
 e.g
 ```C#
 LuaUtility.logHandler = (message) => Unity.Log(message);
-";
+```
 
 # Dependancies
 None.
