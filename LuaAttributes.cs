@@ -1,15 +1,5 @@
-﻿using System;
-
-/// <summary>
-/// Used to document lua apis
-/// </summary>
-[AttributeUsage(AttributeTargets.Class, Inherited = false)]
-public class LuaApi : Attribute
-{
-    public string luaName = string.Empty;
-    public string description = string.Empty;
-    public string notes = string.Empty;
-}
+﻿
+using System;
 
 /// <summary>
 /// Used to document lua functions
@@ -29,7 +19,7 @@ public class LuaApiFunction : Attribute
 /// <summary>
 /// Used to document lua variables
 /// </summary>
-[AttributeUsage(AttributeTargets.Field)]
+[AttributeUsage(AttributeTargets.Field, AllowMultiple = false)]
 public class LuaApiVariable : Attribute
 {
     public string name = string.Empty;
@@ -39,9 +29,10 @@ public class LuaApiVariable : Attribute
 /// <summary>
 /// Used for generating lua counterparts to C# enums as well as document them
 /// </summary>
-[AttributeUsage(AttributeTargets.Enum)]
+[AttributeUsage(AttributeTargets.Enum, AllowMultiple = false)]
 public class LuaApiEnum : Attribute
 {
+    public LuaApiEnum(string name, string description="No description provided.") { this.name = name; this.description = description; }
     public string name = string.Empty;
     public string description = string.Empty;
 }
@@ -49,9 +40,10 @@ public class LuaApiEnum : Attribute
 /// <summary>
 /// Used to document enum values
 /// </summary>
-[AttributeUsage(AttributeTargets.Field)]
+[AttributeUsage(AttributeTargets.Field, AllowMultiple=false)]
 public class LuaApiEnumValue : Attribute
 {
+    public LuaApiEnumValue(string description = "No description provided.", bool hidden=false) { this.description = description; this.hidden = hidden; }
     public string description = string.Empty;
     public bool hidden = false;
 }
